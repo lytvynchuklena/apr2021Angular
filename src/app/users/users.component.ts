@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {IUserModel} from "../models/UserModel";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class AppComponent {
-  title = 'hello angular';
-
-
-  users = [
+export class UsersComponent {
+  users: IUserModel[] = [
     {name: 'vasya', age: 31, status: false},
     {name: 'petya', age: 30, status: true},
     {name: 'kolya', age: 29, status: true},
@@ -22,4 +20,9 @@ export class AppComponent {
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true},
   ];
+
+  constructor() {
+
+  }
+
 }
